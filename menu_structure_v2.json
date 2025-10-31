@@ -35,30 +35,6 @@
     "description": "订单管理-票务管理"
   },
   {
-    "path": "订单管理-预约订单",
-    "url": "https://xstest.axioxio.com/OrderModule/ReservationOrders",
-    "screenshot": "007_订单管理-预约订单.png",
-    "description": "订单管理-预约订单"
-  },
-  {
-    "path": "订单管理-寄存订单",
-    "url": "https://xstest.axioxio.com/OrderModule/DepositOrders",
-    "screenshot": "008_订单管理-寄存订单.png",
-    "description": "订单管理-寄存订单"
-  },
-  {
-    "path": "订单管理-教学订单",
-    "url": "https://xstest.axioxio.com/OrderModule/TeachingOrders",
-    "screenshot": "009_订单管理-教学订单.png",
-    "description": "订单管理-教学订单"
-  },
-  {
-    "path": "订单管理-团队订单",
-    "url": "https://xstest.axioxio.com/OrderModule/TeamOrders",
-    "screenshot": "010_订单管理-团队订单.png",
-    "description": "订单管理-团队订单"
-  },
-  {
     "path": "票务管理-电子券列表",
     "url": "https://xstest.axioxio.com/ProductModule/ETicketItems",
     "screenshot": "011_票务管理-电子券列表.png",
@@ -89,24 +65,6 @@
     "description": "通行管理-闸机配置"
   },
   {
-    "path": "通行管理-卡片管理",
-    "url": "https://xstest.axioxio.com/OrderModule/Cards",
-    "screenshot": "016_通行管理-卡片管理.png",
-    "description": "通行管理-卡片管理"
-  },
-  {
-    "path": "通行管理-通行记录",
-    "url": "https://xstest.axioxio.com/OrderModule/Passages",
-    "screenshot": "017_通行管理-通行记录.png",
-    "description": "通行管理-通行记录"
-  },
-  {
-    "path": "通行管理-通行规则",
-    "url": "https://xstest.axioxio.com/OrderModule/PassageRules",
-    "screenshot": "018_通行管理-通行规则.png",
-    "description": "通行管理-通行规则"
-  },
-  {
     "path": "控制面板-产品管理",
     "url": "https://xstest.axioxio.com/ProductModule/Products",
     "screenshot": "019_控制面板-产品管理.png",
@@ -123,84 +81,6 @@
     "url": "https://xstest.axioxio.com/ProductModule/Holidays",
     "screenshot": "021_控制面板-节假日设置.png",
     "description": "控制面板-节假日设置"
-  },
-  {
-    "path": "控制面板-教练管理",
-    "url": "https://xstest.axioxio.com/TeachingModule/Coaches",
-    "screenshot": "022_控制面板-教练管理.png",
-    "description": "控制面板-教练管理"
-  },
-  {
-    "path": "控制面板-教练评论",
-    "url": "https://xstest.axioxio.com/TeachingModule/Comments",
-    "screenshot": "023_控制面板-教练评论.png",
-    "description": "控制面板-教练评论"
-  },
-  {
-    "path": "控制面板-排班管理",
-    "url": "https://xstest.axioxio.com/TeachingModule/Schedules",
-    "screenshot": "024_控制面板-排班管理.png",
-    "description": "控制面板-排班管理"
-  },
-  {
-    "path": "控制面板-运动级别",
-    "url": "https://xstest.axioxio.com/TeachingModule/SportLevels",
-    "screenshot": "025_控制面板-运动级别.png",
-    "description": "控制面板-运动级别"
-  },
-  {
-    "path": "控制面板-租赁物管理",
-    "url": "https://xstest.axioxio.com/DepositModule/DepositItems",
-    "screenshot": "026_控制面板-租赁物管理.png",
-    "description": "控制面板-租赁物管理"
-  },
-  {
-    "path": "控制面板-租赁物分类",
-    "url": "https://xstest.axioxio.com/DepositModule/DepositItemCategories",
-    "screenshot": "027_控制面板-租赁物分类.png",
-    "description": "控制面板-租赁物分类"
-  },
-  {
-    "path": "控制面板-分销商管理",
-    "url": "https://xstest.axioxio.com/DistributionModule/Distributors",
-    "screenshot": "028_控制面板-分销商管理.png",
-    "description": "控制面板-分销商管理"
-  },
-  {
-    "path": "控制面板-分销订单",
-    "url": "https://xstest.axioxio.com/DistributionModule/DistributionOrders",
-    "screenshot": "029_控制面板-分销订单.png",
-    "description": "控制面板-分销订单"
-  },
-  {
-    "path": "报表管理-票务核销报表",
-    "url": "https://xstest.axioxio.com/ReportModule/TicketReport",
-    "screenshot": "030_报表管理-票务核销报表.png",
-    "description": "报表管理-票务核销报表"
-  },
-  {
-    "path": "报表管理-教学核销报表",
-    "url": "https://xstest.axioxio.com/ReportModule/TeachingReport",
-    "screenshot": "031_报表管理-教学核销报表.png",
-    "description": "报表管理-教学核销报表"
-  },
-  {
-    "path": "报表管理-教学数据看板",
-    "url": "https://xstest.axioxio.com/ReportModule/TeachingDashboard",
-    "screenshot": "032_报表管理-教学数据看板.png",
-    "description": "报表管理-教学数据看板"
-  },
-  {
-    "path": "报表管理-租赁核销报表",
-    "url": "https://xstest.axioxio.com/ReportModule/DepositReport",
-    "screenshot": "033_报表管理-租赁核销报表.png",
-    "description": "报表管理-租赁核销报表"
-  },
-  {
-    "path": "报表管理-租赁物明细报表",
-    "url": "https://xstest.axioxio.com/ReportModule/DepositItemReport",
-    "screenshot": "034_报表管理-租赁物明细报表.png",
-    "description": "报表管理-租赁物明细报表"
   },
   {
     "path": "系统管理-文件管理",
@@ -227,33 +107,15 @@
     "description": "系统管理-用户管理"
   },
   {
-    "path": "系统管理-审计日志",
-    "url": "https://xstest.axioxio.com/AuditLogging/AuditLogs",
-    "screenshot": "039_系统管理-审计日志.png",
-    "description": "系统管理-审计日志"
-  },
-  {
     "path": "系统管理-安全日志",
     "url": "https://xstest.axioxio.com/Identity/SecurityLogs",
     "screenshot": "040_系统管理-安全日志.png",
     "description": "系统管理-安全日志"
   },
   {
-    "path": "系统管理-文本模板",
-    "url": "https://xstest.axioxio.com/TextTemplateManagement/TextTemplates",
-    "screenshot": "041_系统管理-文本模板.png",
-    "description": "系统管理-文本模板"
-  },
-  {
     "path": "系统管理-系统设置",
     "url": "https://xstest.axioxio.com/SettingManagement",
     "screenshot": "042_系统管理-系统设置.png",
     "description": "系统管理-系统设置"
-  },
-  {
-    "path": "系统管理-门店管理",
-    "url": "https://xstest.axioxio.com/StoreModule/Stores",
-    "screenshot": "043_系统管理-门店管理.png",
-    "description": "系统管理-门店管理"
   }
 ]
