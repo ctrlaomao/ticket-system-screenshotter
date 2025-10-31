@@ -117,5 +117,17 @@
     "url": "https://xstest.axioxio.com/SettingManagement",
     "screenshot": "042_系统管理-系统设置.png",
     "description": "系统管理-系统设置"
+  },
+  {
+    "path": "票务-产品-产品管理",
+    "url": "https://xstest.axioxio.com/ProductModule/Products",
+    "screenshot": "043_票务-产品-产品管理.png",
+    "description": "票务-产品-产品管理"
+  },
+  {
+    "path": "票务-产品-产品分类",
+    "url": "https://xstest.axioxio.com/ProductModule/Categories",
+    "screenshot": "044_票务-产品-产品分类.png",
+    "description": "票务-产品-产品分类"
   }
 ]
