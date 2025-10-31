@@ -165,5 +165,11 @@
     "url": "https://xstest.axioxio.com/OrderModule/LeaseWriteOffs",
     "screenshot": "050_报表-租赁核销报表.png",
     "description": "报表-租赁核销报表"
+  },
+  {
+    "path": "租赁-订单",
+    "url": "https://xstest.axioxio.com/OrderModule/Leases",
+    "screenshot": "051_租赁-订单.png",
+    "description": "租赁-订单"
   }
 ]
