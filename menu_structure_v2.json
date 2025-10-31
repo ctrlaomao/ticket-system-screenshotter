@@ -171,5 +171,173 @@
     "url": "https://xstest.axioxio.com/OrderModule/Leases",
     "screenshot": "051_租赁-订单.png",
     "description": "租赁-订单"
+  },
+  {
+    "path": "产品分类",
+    "url": "https://xstest.axioxio.com/ProductModule/Categories/IndexBooking",
+    "screenshot": "052_产品分类.png",
+    "description": "产品分类"
+  },
+  {
+    "path": "产品属性",
+    "url": "https://xstest.axioxio.com/Train/ProductAttributes",
+    "screenshot": "053_产品属性.png",
+    "description": "产品属性"
+  },
+  {
+    "path": "产品管理",
+    "url": "https://xstest.axioxio.com/ProductModule/Products/IndexBook",
+    "screenshot": "054_产品管理.png",
+    "description": "产品管理"
+  },
+  {
+    "path": "内部等级",
+    "url": "https://xstest.axioxio.com/ProductModule/Distributorlevels",
+    "screenshot": "055_内部等级.png",
+    "description": "内部等级"
+  },
+  {
+    "path": "分销商",
+    "url": "https://xstest.axioxio.com/ProductModule/Distributors",
+    "screenshot": "056_分销商.png",
+    "description": "分销商"
+  },
+  {
+    "path": "分销商产品",
+    "url": "https://xstest.axioxio.com/ProductModule/DistributorTickets",
+    "screenshot": "057_分销商产品.png",
+    "description": "分销商产品"
+  },
+  {
+    "path": "卡片管理",
+    "url": "https://xstest.axioxio.com/OrderModule/GateCards",
+    "screenshot": "058_卡片管理.png",
+    "description": "卡片管理"
+  },
+  {
+    "path": "团队下单",
+    "url": "https://xstest.axioxio.com/Train/CheckOut/Batch",
+    "screenshot": "059_团队下单.png",
+    "description": "团队下单"
+  },
+  {
+    "path": "培训管理",
+    "url": "https://xstest.axioxio.com/Train/TrainingManagements",
+    "screenshot": "060_培训管理.png",
+    "description": "培训管理"
+  },
+  {
+    "path": "山地学院汇总报表",
+    "url": "https://xstest.axioxio.com/OrderModule/ReportItems",
+    "screenshot": "061_山地学院汇总报表.png",
+    "description": "山地学院汇总报表"
+  },
+  {
+    "path": "报名表单",
+    "url": "https://xstest.axioxio.com/Train/FormDesigns",
+    "screenshot": "062_报名表单.png",
+    "description": "报名表单"
+  },
+  {
+    "path": "拼班",
+    "url": "https://xstest.axioxio.com/Train/Desktop/Group",
+    "screenshot": "063_拼班.png",
+    "description": "拼班"
+  },
+  {
+    "path": "拼班管理",
+    "url": "https://xstest.axioxio.com/Train/CampDates/IndexGroup",
+    "screenshot": "064_拼班管理.png",
+    "description": "拼班管理"
+  },
+  {
+    "path": "排班管理",
+    "url": "https://xstest.axioxio.com/Train/Vacations",
+    "screenshot": "065_排班管理.png",
+    "description": "排班管理"
+  },
+  {
+    "path": "教练",
+    "url": "https://xstest.axioxio.com/Train/Desktop",
+    "screenshot": "066_教练.png",
+    "description": "教练"
+  },
+  {
+    "path": "教练管理",
+    "url": "https://xstest.axioxio.com/Train/CoachInfos",
+    "screenshot": "067_教练管理.png",
+    "description": "教练管理"
+  },
+  {
+    "path": "文本模板",
+    "url": "https://xstest.axioxio.com/TextTemplates",
+    "screenshot": "068_文本模板.png",
+    "description": "文本模板"
+  },
+  {
+    "path": "次卡",
+    "url": "https://xstest.axioxio.com/Train/Desktop/BuyTicketCard",
+    "screenshot": "069_次卡.png",
+    "description": "次卡"
+  },
+  {
+    "path": "节假日设置",
+    "url": "https://xstest.axioxio.com/ProductModule/HolidayGroups",
+    "screenshot": "070_节假日设置.png",
+    "description": "节假日设置"
+  },
+  {
+    "path": "营地",
+    "url": "https://xstest.axioxio.com/Train/Desktop/camp",
+    "screenshot": "071_营地.png",
+    "description": "营地"
+  },
+  {
+    "path": "营期管理",
+    "url": "https://xstest.axioxio.com/Train/CampDates",
+    "screenshot": "072_营期管理.png",
+    "description": "营期管理"
+  },
+  {
+    "path": "订单",
+    "url": "https://xstest.axioxio.com/OrderModule/Orders/Train",
+    "screenshot": "073_订单.png",
+    "description": "订单"
+  },
+  {
+    "path": "评论管理",
+    "url": "https://xstest.axioxio.com/Train/CoachReviews",
+    "screenshot": "074_评论管理.png",
+    "description": "评论管理"
+  },
+  {
+    "path": "软件版本",
+    "url": "https://xstest.axioxio.com/OrderModule/GateVersions",
+    "screenshot": "075_软件版本.png",
+    "description": "软件版本"
+  },
+  {
+    "path": "运动/级别",
+    "url": "https://xstest.axioxio.com/Train/Sports",
+    "screenshot": "076_运动_级别.png",
+    "description": "运动/级别"
+  },
+  {
+    "path": "通行记录",
+    "url": "https://xstest.axioxio.com/OrderModule/GateLogs",
+    "screenshot": "077_通行记录.png",
+    "description": "通行记录"
+  },
+  {
+    "path": "门店管理",
+    "url": "https://xstest.axioxio.com/Store/StoreInfos#",
+    "screenshot": "078_门店管理.png",
+    "description": "门店管理"
+  },
+  {
+    "path": "首页",
+    "url": "https://xstest.axioxio.com/",
+    "screenshot": "079_首页.png",
+    "description": "首页"
   }
 ]
