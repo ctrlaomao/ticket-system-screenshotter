@@ -1,0 +1,264 @@
+{
+  "total": 48,
+  "existing": 15,
+  "missing": 33,
+  "existing_menus": [
+    {
+      "name": "人脸库",
+      "url": "https://xstest.axioxio.com/OrderModule/FaceImages",
+      "has_screenshot": true,
+      "existing_name": "通行管理-人脸库"
+    },
+    {
+      "name": "初始化",
+      "url": "https://xstest.axioxio.com/ProductModule/ETickets",
+      "has_screenshot": true,
+      "existing_name": "票务管理-电子票初始化"
+    },
+    {
+      "name": "发卡",
+      "url": "https://xstest.axioxio.com/OrderModule/CheckOut/BindCard",
+      "has_screenshot": true,
+      "existing_name": "工作台-发卡"
+    },
+    {
+      "name": "收银",
+      "url": "https://xstest.axioxio.com/OrderModule/CheckOut",
+      "has_screenshot": true,
+      "existing_name": "工作台-收银"
+    },
+    {
+      "name": "教学核销报表",
+      "url": "https://xstest.axioxio.com/OrderModule/WriteOffItems/Train",
+      "has_screenshot": true,
+      "existing_name": "报表-教学核销报表"
+    },
+    {
+      "name": "文件管理",
+      "url": "https://xstest.axioxio.com/FileManagement",
+      "has_screenshot": true,
+      "existing_name": "系统管理-文件管理"
+    },
+    {
+      "name": "电子券列表",
+      "url": "https://xstest.axioxio.com/ProductModule/ETicketItems",
+      "has_screenshot": true,
+      "existing_name": "票务管理-电子券列表"
+    },
+    {
+      "name": "票务核销报表",
+      "url": "https://xstest.axioxio.com/OrderModule/WriteOffItems",
+      "has_screenshot": true,
+      "existing_name": "报表-票务核销报表"
+    },
+    {
+      "name": "票务管理",
+      "url": "https://xstest.axioxio.com/OrderModule/OrderTickets",
+      "has_screenshot": true,
+      "existing_name": "订单管理-票务管理"
+    },
+    {
+      "name": "租赁核销报表",
+      "url": "https://xstest.axioxio.com/OrderModule/LeaseWriteOffs",
+      "has_screenshot": true,
+      "existing_name": "报表-租赁核销报表"
+    },
+    {
+      "name": "纸制票模板",
+      "url": "https://xstest.axioxio.com/ProductModule/ETicketTemplates",
+      "has_screenshot": true,
+      "existing_name": "票务管理-纸制票模板"
+    },
+    {
+      "name": "订单",
+      "url": "https://xstest.axioxio.com/OrderModule/Orders",
+      "has_screenshot": true,
+      "existing_name": "订单管理-订单列表"
+    },
+    {
+      "name": "设置",
+      "url": "https://xstest.axioxio.com/SettingManagement",
+      "has_screenshot": true,
+      "existing_name": "系统管理-系统设置"
+    },
+    {
+      "name": "还卡",
+      "url": "https://xstest.axioxio.com/OrderModule/CheckOut/Return",
+      "has_screenshot": true,
+      "existing_name": "工作台-还卡"
+    },
+    {
+      "name": "闸机",
+      "url": "https://xstest.axioxio.com/OrderModule/Gates",
+      "has_screenshot": true,
+      "existing_name": "通行管理-闸机配置"
+    }
+  ],
+  "missing_menus": [
+    {
+      "name": "产品分类",
+      "url": "https://xstest.axioxio.com/ProductModule/Categories/IndexTicket",
+      "has_screenshot": false
+    },
+    {
+      "name": "产品分类",
+      "url": "https://xstest.axioxio.com/ProductModule/Categories/IndexBooking",
+      "has_screenshot": false
+    },
+    {
+      "name": "产品属性",
+      "url": "https://xstest.axioxio.com/Train/ProductAttributes",
+      "has_screenshot": false
+    },
+    {
+      "name": "产品管理",
+      "url": "https://xstest.axioxio.com/ProductModule/Products/IndexTicket",
+      "has_screenshot": false
+    },
+    {
+      "name": "产品管理",
+      "url": "https://xstest.axioxio.com/ProductModule/Products/IndexBook",
+      "has_screenshot": false
+    },
+    {
+      "name": "内部等级",
+      "url": "https://xstest.axioxio.com/ProductModule/Distributorlevels",
+      "has_screenshot": false
+    },
+    {
+      "name": "分销商",
+      "url": "https://xstest.axioxio.com/ProductModule/Distributors",
+      "has_screenshot": false
+    },
+    {
+      "name": "分销商产品",
+      "url": "https://xstest.axioxio.com/ProductModule/DistributorTickets",
+      "has_screenshot": false
+    },
+    {
+      "name": "卡片管理",
+      "url": "https://xstest.axioxio.com/OrderModule/GateCards",
+      "has_screenshot": false
+    },
+    {
+      "name": "团队下单",
+      "url": "https://xstest.axioxio.com/Train/CheckOut/Batch",
+      "has_screenshot": false
+    },
+    {
+      "name": "培训管理",
+      "url": "https://xstest.axioxio.com/Train/TrainingManagements",
+      "has_screenshot": false
+    },
+    {
+      "name": "审计日志",
+      "url": "https://xstest.axioxio.com/AuditLogs",
+      "has_screenshot": false
+    },
+    {
+      "name": "山地学院汇总报表",
+      "url": "https://xstest.axioxio.com/OrderModule/ReportItems",
+      "has_screenshot": false
+    },
+    {
+      "name": "报名表单",
+      "url": "https://xstest.axioxio.com/Train/FormDesigns",
+      "has_screenshot": false
+    },
+    {
+      "name": "拼班",
+      "url": "https://xstest.axioxio.com/Train/Desktop/Group",
+      "has_screenshot": false
+    },
+    {
+      "name": "拼班管理",
+      "url": "https://xstest.axioxio.com/Train/CampDates/IndexGroup",
+      "has_screenshot": false
+    },
+    {
+      "name": "排班管理",
+      "url": "https://xstest.axioxio.com/Train/Vacations",
+      "has_screenshot": false
+    },
+    {
+      "name": "教学数据看板",
+      "url": "https://xstest.axioxio.com/OrderModule/WriteOffItems/Analysis",
+      "has_screenshot": false
+    },
+    {
+      "name": "教练",
+      "url": "https://xstest.axioxio.com/Train/Desktop",
+      "has_screenshot": false
+    },
+    {
+      "name": "教练管理",
+      "url": "https://xstest.axioxio.com/Train/CoachInfos",
+      "has_screenshot": false
+    },
+    {
+      "name": "文本模板",
+      "url": "https://xstest.axioxio.com/TextTemplates",
+      "has_screenshot": false
+    },
+    {
+      "name": "次卡",
+      "url": "https://xstest.axioxio.com/Train/Desktop/BuyTicketCard",
+      "has_screenshot": false
+    },
+    {
+      "name": "租赁物明细报表",
+      "url": "https://xstest.axioxio.com/OrderModule/WriteOffItems/LeaseReport",
+      "has_screenshot": false
+    },
+    {
+      "name": "节假日设置",
+      "url": "https://xstest.axioxio.com/ProductModule/HolidayGroups",
+      "has_screenshot": false
+    },
+    {
+      "name": "营地",
+      "url": "https://xstest.axioxio.com/Train/Desktop/camp",
+      "has_screenshot": false
+    },
+    {
+      "name": "营期管理",
+      "url": "https://xstest.axioxio.com/Train/CampDates",
+      "has_screenshot": false
+    },
+    {
+      "name": "订单",
+      "url": "https://xstest.axioxio.com/OrderModule/Orders/Train",
+      "has_screenshot": false
+    },
+    {
+      "name": "评论管理",
+      "url": "https://xstest.axioxio.com/Train/CoachReviews",
+      "has_screenshot": false
+    },
+    {
+      "name": "软件版本",
+      "url": "https://xstest.axioxio.com/OrderModule/GateVersions",
+      "has_screenshot": false
+    },
+    {
+      "name": "运动/级别",
+      "url": "https://xstest.axioxio.com/Train/Sports",
+      "has_screenshot": false
+    },
+    {
+      "name": "通行记录",
+      "url": "https://xstest.axioxio.com/OrderModule/GateLogs",
+      "has_screenshot": false
+    },
+    {
+      "name": "门店管理",
+      "url": "https://xstest.axioxio.com/Store/StoreInfos#",
+      "has_screenshot": false
+    },
+    {
+      "name": "首页",
+      "url": "https://xstest.axioxio.com/",
+      "has_screenshot": false
+    }
+  ]
+}
