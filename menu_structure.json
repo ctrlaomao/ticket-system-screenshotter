@@ -1,0 +1,67 @@
+[
+  {
+    "path": "首页",
+    "screenshot": "001_首页_默认页面.png",
+    "description": "系统首页"
+  },
+  {
+    "path": "收银",
+    "url": "https://xstest.axioxio.com/OrderModule/CheckOut",
+    "screenshot": "002_收银.png",
+    "description": "收银"
+  },
+  {
+    "path": "发卡",
+    "url": "https://xstest.axioxio.com/OrderModule/CheckOut/BindCard",
+    "screenshot": "003_发卡.png",
+    "description": "发卡"
+  },
+  {
+    "path": "还卡",
+    "url": "https://xstest.axioxio.com/OrderModule/CheckOut/Return",
+    "screenshot": "004_还卡.png",
+    "description": "还卡"
+  },
+  {
+    "path": "订单",
+    "url": "https://xstest.axioxio.com/OrderModule/Orders",
+    "screenshot": "005_订单.png",
+    "description": "订单"
+  },
+  {
+    "path": "票务管理",
+    "url": "https://xstest.axioxio.com/OrderModule/OrderTickets",
+    "screenshot": "006_票务管理.png",
+    "description": "票务管理"
+  },
+  {
+    "path": "电子券列表",
+    "url": "https://xstest.axioxio.com/ProductModule/ETicketItems",
+    "screenshot": "007_电子券列表.png",
+    "description": "电子券列表"
+  },
+  {
+    "path": "初始化",
+    "url": "https://xstest.axioxio.com/ProductModule/ETickets",
+    "screenshot": "008_初始化.png",
+    "description": "初始化"
+  },
+  {
+    "path": "纸制票模板",
+    "url": "https://xstest.axioxio.com/ProductModule/ETicketTemplates",
+    "screenshot": "009_纸制票模板.png",
+    "description": "纸制票模板"
+  },
+  {
+    "path": "人脸库",
+    "url": "https://xstest.axioxio.com/OrderModule/FaceImages",
+    "screenshot": "010_人脸库.png",
+    "description": "人脸库"
+  },
+  {
+    "path": "闸机",
+    "url": "https://xstest.axioxio.com/OrderModule/Gates",
+    "screenshot": "011_闸机.png",
+    "description": "闸机"
+  }
+]
