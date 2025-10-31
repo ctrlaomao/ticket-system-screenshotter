@@ -129,5 +129,41 @@
     "url": "https://xstest.axioxio.com/ProductModule/Categories",
     "screenshot": "044_票务-产品-产品分类.png",
     "description": "票务-产品-产品分类"
+  },
+  {
+    "path": "租赁-产品-产品管理",
+    "url": "https://xstest.axioxio.com/ProductModule/Products/IndexLease",
+    "screenshot": "045_租赁-产品-产品管理.png",
+    "description": "租赁-产品-产品管理"
+  },
+  {
+    "path": "租赁-产品-产品分类",
+    "url": "https://xstest.axioxio.com/ProductModule/Categories/IndexLease",
+    "screenshot": "046_租赁-产品-产品分类.png",
+    "description": "租赁-产品-产品分类"
+  },
+  {
+    "path": "小程序-首页装修",
+    "url": "https://xstest.axioxio.com/MiniprogramAdmin/Design/Ticket",
+    "screenshot": "047_小程序-首页装修.png",
+    "description": "小程序-首页装修"
+  },
+  {
+    "path": "报表-票务核销报表",
+    "url": "https://xstest.axioxio.com/OrderModule/WriteOffItems",
+    "screenshot": "048_报表-票务核销报表.png",
+    "description": "报表-票务核销报表"
+  },
+  {
+    "path": "报表-教学核销报表",
+    "url": "https://xstest.axioxio.com/OrderModule/WriteOffItems/Train",
+    "screenshot": "049_报表-教学核销报表.png",
+    "description": "报表-教学核销报表"
+  },
+  {
+    "path": "报表-租赁核销报表",
+    "url": "https://xstest.axioxio.com/OrderModule/LeaseWriteOffs",
+    "screenshot": "050_报表-租赁核销报表.png",
+    "description": "报表-租赁核销报表"
   }
 ]
