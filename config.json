@@ -1,0 +1,19 @@
+{
+  "system": {
+    "name": "票务系统",
+    "description": "票务系统配置文件"
+  },
+  "login": {
+    "url": "https://xs.bjstarfish.com/Account/Login",
+    "base_url": "https://xs.bjstarfish.com",
+    "username": "13811458301",
+    "password": "Qaaaaa8080@",
+    "language": "zh-CN",
+    "language_display": "简体中文"
+  },
+  "settings": {
+    "screenshot_resolution": "1920x1080",
+    "wait_timeout": 30000,
+    "navigation_timeout": 60000
+  }
+}
