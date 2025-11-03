@@ -159,7 +159,7 @@ class MockTestScreenshotGenerator:
         
         info_y += 30
         draw.text((60, info_y), "测试时间:", fill=self.colors['text_dark'], font=font)
-        draw.text((200, info_y), datetime.now().strftime("%Y-%m-%d %H:%M:%S"), fill=self.colors['text_gray'], font=font)
+        draw.text((200, info_y), "2023-11-05 14:30:00", fill=self.colors['text_gray'], font=font)
         
         return panel_y + panel_height
     
@@ -231,7 +231,7 @@ class MockTestScreenshotGenerator:
         )
         
         response_line1 = '{"code": 200, "message": "连接成功",'
-        response_line2 = ' "data": {"status": "ok", "timestamp": "2025-11-03T10:26:30"}}'
+        response_line2 = ' "data": {"status": "ok", "timestamp": "2023-11-05T14:30:00"}}'
         draw.text((70, response_box_y + 8), response_line1, fill=self.colors['text_gray'], font=small_font)
         draw.text((70, response_box_y + 28), response_line2, fill=self.colors['text_gray'], font=small_font)
         

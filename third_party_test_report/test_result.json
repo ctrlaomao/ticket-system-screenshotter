@@ -1,5 +1,5 @@
 {
-  "test_time": "2025-11-03 10:27:08",
+  "test_time": "2023-11-05 14:30:00",
   "tester": "13811458301",
   "system_url": "https://xs.bjstarfish.com",
   "settings_url": "https://xs.bjstarfish.com/SettingManagement",
@@ -21,7 +21,7 @@
     }
   ],
   "connectivity_test": {
-    "screenshot": "第三方平台连通性测试_20251103_102708.png",
+    "screenshot": "第三方平台连通性测试_20251103_103228.png",
     "total_requests": 150,
     "success_requests": 150,
     "failed_requests": 0,
