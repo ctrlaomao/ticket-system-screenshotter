@@ -1,24 +1,23 @@
 {
-  "test_time": "2025-11-03 10:13:09",
+  "test_time": "2025-11-03 10:21:45",
   "tester": "13811458301",
   "system_url": "https://xs.bjstarfish.com",
-  "ota_settings_url": "https://xs.bjstarfish.com/SettingManagement",
+  "settings_url": "https://xs.bjstarfish.com/SettingManagement",
   "platforms": [
     {
       "name": "美团",
-      "found": false,
-      "screenshot": ""
-    },
-    {
-      "name": "携程",
-      "found": false,
-      "screenshot": ""
+      "found": true,
+      "screenshot": "美团_设置_已打码_20251103_102206.png"
     },
     {
       "name": "抖音",
-      "found": false,
-      "screenshot": ""
+      "found": true,
+      "screenshot": "抖音_设置_已打码_20251103_102209.png"
+    },
+    {
+      "name": "携程",
+      "found": true,
+      "screenshot": "携程_设置_已打码_20251103_102213.png"
     }
-  ],
-  "screenshot": "OTA平台设置_已打码_20251103_101325.png"
+  ]
 }

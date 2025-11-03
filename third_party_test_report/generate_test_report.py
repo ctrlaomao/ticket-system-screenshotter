@@ -111,7 +111,7 @@ class TestReportGenerator:
         doc.add_heading('三、OTA平台配置查看', level=1)
         
         # 添加配置页面信息
-        ota_url = self.test_results.get('ota_settings_url', 'N/A')
+        ota_url = self.test_results.get('settings_url', 'N/A')
         p = doc.add_paragraph()
         p.add_run('配置页面地址: ').font.bold = True
         p.add_run(ota_url)
@@ -120,47 +120,62 @@ class TestReportGenerator:
         
         p = doc.add_paragraph()
         p.add_run('查看说明: ').font.bold = True
-        p.add_run('通过访问系统OTA平台设置页面，查看美团、携程、抖音三个第三方平台的对接配置信息。')
+        p.add_run('通过访问系统设置页面，选择"OTA平台"选项，然后依次查看美团设置、携程设置、抖音设置三个Tab页的配置信息。')
         
         doc.add_paragraph()
         
-        # 添加完整的配置页面截图
-        screenshot_file = self.test_results.get('screenshot')
-        if screenshot_file:
-            screenshot_path = self.screenshots_dir / screenshot_file
-            if screenshot_path.exists():
-                p = doc.add_paragraph()
-                p.add_run('OTA平台配置页面截图：').font.bold = True
-                p.paragraph_format.space_before = Pt(12)
-                
-                p = doc.add_paragraph()
-                p.add_run('（注：出于安全考虑，所有敏感信息已进行遮罩处理）').font.color.rgb = RGBColor(255, 128, 0)
-                p.runs[0].font.size = Pt(10)
-                p.runs[0].font.italic = True
-                
-                doc.add_picture(str(screenshot_path), width=Inches(6.5))
-                
-                # 居中对齐
-                last_paragraph = doc.paragraphs[-1]
-                last_paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
-            else:
-                p = doc.add_paragraph()
-                p.add_run('⚠ 截图文件未找到').font.color.rgb = RGBColor(255, 128, 0)
+        p = doc.add_paragraph()
+        p.add_run('安全提示: ').font.bold = True
+        warning_text = p.add_run('出于安全考虑，所有截图中的敏感信息（AppID、AppSecret、Token、回调地址等）均已进行遮罩处理。')
+        warning_text.font.color.rgb = RGBColor(255, 128, 0)
+        warning_text.font.italic = True
         
         doc.add_paragraph()
         
-        # 平台状态说明
+        # 为每个平台单独显示截图
         platforms = self.test_results.get('platforms', [])
         
-        if platforms:
-            p = doc.add_paragraph()
-            p.add_run('配置页面包含的平台：').font.bold = True
+        for idx, platform in enumerate(platforms, 1):
+            platform_name = platform.get('name', '未知平台')
             
-            for platform in platforms:
-                platform_name = platform.get('name', '未知')
-                status_icon = "✓" if platform.get('found', False) else "○"
-                p = doc.add_paragraph(f"{status_icon} {platform_name}平台配置", style='List Bullet')
-                p.paragraph_format.left_indent = Inches(0.5)
+            # 平台标题
+            doc.add_heading(f'3.{idx} {platform_name}平台配置', level=2)
+            
+            if platform.get('found', False):
+                p = doc.add_paragraph()
+                p.add_run('配置状态: ').font.bold = True
+                found_text = p.add_run('✓ 已找到配置Tab')
+                found_text.font.color.rgb = RGBColor(0, 128, 0)
+                found_text.font.bold = True
+                
+                # 添加截图
+                screenshot_file = platform.get('screenshot')
+                if screenshot_file:
+                    screenshot_path = self.screenshots_dir / screenshot_file
+                    if screenshot_path.exists():
+                        doc.add_paragraph()
+                        p = doc.add_paragraph()
+                        p.add_run(f'{platform_name}设置页面截图：').font.bold = True
+                        
+                        doc.add_picture(str(screenshot_path), width=Inches(6.5))
+                        
+                        # 居中对齐
+                        last_paragraph = doc.paragraphs[-1]
+                        last_paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
+                        
+                        # 添加说明
+                        p = doc.add_paragraph()
+                        p.add_run('说明: ').font.bold = True
+                        p.add_run(f'该截图展示了{platform_name}平台的配置界面，包含AppID、密钥、回调地址等关键配置项（已遮罩）。')
+                    else:
+                        p = doc.add_paragraph()
+                        p.add_run('⚠ 截图文件未找到').font.color.rgb = RGBColor(255, 128, 0)
+            else:
+                p = doc.add_paragraph()
+                p.add_run('配置状态: ').font.bold = True
+                p.add_run('✗ 未找到配置Tab').font.color.rgb = RGBColor(255, 0, 0)
+            
+            doc.add_paragraph()
         
         doc.add_paragraph()
     
@@ -273,15 +288,10 @@ class TestReportGenerator:
         doc.add_heading('五、测试结论', level=1)
         
         platforms = self.test_results.get('platforms', [])
-        manual_results = self.test_results.get('manual_search_results', [])
         
-        # 统计实际找到的平台
-        found_platforms = set()
-        for result in manual_results:
-            found_platforms.update(result.get('platforms', []))
-        
+        # 统计找到的平台
         total_count = len(platforms)
-        actual_found = len(found_platforms)
+        found_count = sum(1 for p in platforms if p.get('found', False))
         
         # 结论表格
         table = doc.add_table(rows=5, cols=2)
@@ -294,19 +304,19 @@ class TestReportGenerator:
             cell.paragraphs[0].runs[0].font.bold = True
             cell.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
         
-        table.rows[1].cells[0].text = '总测试平台数'
+        table.rows[1].cells[0].text = '测试平台数'
         table.rows[1].cells[1].text = str(total_count)
         
-        table.rows[2].cells[0].text = '成功找到配置'
-        table.rows[2].cells[1].text = str(actual_found)
+        table.rows[2].cells[0].text = '成功截取Tab'
+        table.rows[2].cells[1].text = str(found_count)
         
-        table.rows[3].cells[0].text = '配置页面数量'
-        table.rows[3].cells[1].text = str(len(manual_results))
+        table.rows[3].cells[0].text = '配置截图数量'
+        table.rows[3].cells[1].text = str(found_count)
         
         table.rows[4].cells[0].text = '测试完成度'
         result_cell = table.rows[4].cells[1]
-        result_cell.text = '100%' if actual_found == total_count else f'{actual_found}/{total_count}'
-        if actual_found == total_count:
+        result_cell.text = '100%' if found_count == total_count else f'{found_count}/{total_count}'
+        if found_count == total_count:
             result_cell.paragraphs[0].runs[0].font.color.rgb = RGBColor(0, 128, 0)
             result_cell.paragraphs[0].runs[0].font.bold = True
         
@@ -316,14 +326,34 @@ class TestReportGenerator:
         p = doc.add_paragraph()
         p.add_run('总结：').font.bold = True
         
-        if actual_found == total_count:
-            summary = f"本次测试成功查看了所有{total_count}个第三方平台的配置信息。在分销商管理模块中找到了美团、携程、抖音三个平台的配置页面，可以查看回调域名、IP白名单等关键配置项。配置信息完整，页面访问正常。"
-        elif actual_found > 0:
-            summary = f"本次测试成功查看了{actual_found}个平台的配置信息，另有{total_count - actual_found}个平台的配置暂未找到，可能需要特定权限或在其他位置。"
+        if found_count == total_count:
+            summary = f"本次测试成功查看了所有{total_count}个第三方平台的配置信息。通过访问系统设置页面的OTA平台选项，依次截取了美团设置、携程设置、抖音设置三个Tab页的配置界面，每个平台均有完整的配置截图。所有敏感信息（AppID、AppSecret、Token、回调地址等）已进行遮罩处理，确保信息安全。"
+        elif found_count > 0:
+            summary = f"本次测试成功查看了{found_count}个平台的配置信息，另有{total_count - found_count}个平台的Tab未能找到。"
         else:
-            summary = "本次测试未能在系统中找到第三方平台的配置页面，建议联系系统管理员确认配置位置或权限。"
+            summary = "本次测试未能找到OTA平台配置Tab页，建议联系系统管理员确认配置位置或权限。"
         
         doc.add_paragraph(summary)
+        
+        # 平台详情
+        doc.add_paragraph()
+        p = doc.add_paragraph()
+        p.add_run('各平台配置情况：').font.bold = True
+        
+        for platform in platforms:
+            platform_name = platform.get('name', '未知')
+            found = platform.get('found', False)
+            
+            p = doc.add_paragraph()
+            bullet = p.add_run(f'• {platform_name}平台: ')
+            bullet.font.bold = True
+            
+            if found:
+                status_text = p.add_run('✓ 配置Tab已找到，截图已保存（敏感信息已遮罩）')
+                status_text.font.color.rgb = RGBColor(0, 128, 0)
+            else:
+                status_text = p.add_run('○ 配置Tab未找到')
+                status_text.font.color.rgb = RGBColor(128, 128, 128)
         
         doc.add_paragraph()
     
