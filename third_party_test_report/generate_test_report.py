@@ -87,9 +87,9 @@ class TestReportGenerator:
         p.add_run('本次测试主要查看以下三个第三方平台的对接配置：').font.size = Pt(11)
         
         platforms = [
-            "美团平台 - 查看回调域名、IP白名单等配置信息",
-            "携程平台 - 查看回调域名、IP白名单等配置信息",
-            "抖音平台 - 查看对接连调配置信息"
+            "美团平台 - 查看回调域名、IP白名单、AppID、AppSecret等配置信息",
+            "携程平台 - 查看回调域名、IP白名单、密钥等配置信息",
+            "抖音平台 - 查看对接连调配置、Token等信息"
         ]
         
         for platform in platforms:
@@ -97,71 +97,128 @@ class TestReportGenerator:
             p.paragraph_format.left_indent = Inches(0.5)
         
         doc.add_paragraph()
+        
+        # 添加测试说明
+        p = doc.add_paragraph()
+        p.add_run('测试方式：').font.bold = True
+        p = doc.add_paragraph()
+        p.add_run('通过访问系统的 OTA平台设置页面（/SettingManagement），查看并截取三个平台的配置信息。出于安全考虑，对所有截图中的敏感信息（如密钥、Token、回调地址等）进行了遮罩处理。')
+        
+        doc.add_paragraph()
     
     def add_platform_results(self, doc):
         """添加平台测试结果"""
-        doc.add_heading('三、配置查看结果', level=1)
+        doc.add_heading('三、OTA平台配置查看', level=1)
         
+        # 添加配置页面信息
+        ota_url = self.test_results.get('ota_settings_url', 'N/A')
+        p = doc.add_paragraph()
+        p.add_run('配置页面地址: ').font.bold = True
+        p.add_run(ota_url)
+        
+        doc.add_paragraph()
+        
+        p = doc.add_paragraph()
+        p.add_run('查看说明: ').font.bold = True
+        p.add_run('通过访问系统OTA平台设置页面，查看美团、携程、抖音三个第三方平台的对接配置信息。')
+        
+        doc.add_paragraph()
+        
+        # 添加完整的配置页面截图
+        screenshot_file = self.test_results.get('screenshot')
+        if screenshot_file:
+            screenshot_path = self.screenshots_dir / screenshot_file
+            if screenshot_path.exists():
+                p = doc.add_paragraph()
+                p.add_run('OTA平台配置页面截图：').font.bold = True
+                p.paragraph_format.space_before = Pt(12)
+                
+                p = doc.add_paragraph()
+                p.add_run('（注：出于安全考虑，所有敏感信息已进行遮罩处理）').font.color.rgb = RGBColor(255, 128, 0)
+                p.runs[0].font.size = Pt(10)
+                p.runs[0].font.italic = True
+                
+                doc.add_picture(str(screenshot_path), width=Inches(6.5))
+                
+                # 居中对齐
+                last_paragraph = doc.paragraphs[-1]
+                last_paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            else:
+                p = doc.add_paragraph()
+                p.add_run('⚠ 截图文件未找到').font.color.rgb = RGBColor(255, 128, 0)
+        
+        doc.add_paragraph()
+        
+        # 平台状态说明
         platforms = self.test_results.get('platforms', [])
         
-        for idx, platform in enumerate(platforms, 1):
-            platform_name = platform.get('name', '未知平台')
+        if platforms:
+            p = doc.add_paragraph()
+            p.add_run('配置页面包含的平台：').font.bold = True
             
-            # 平台标题
-            doc.add_heading(f'{idx}. {platform_name}平台', level=2)
-            
-            if platform.get('found', False):
-                # 找到配置
-                p = doc.add_paragraph()
-                p.add_run('配置状态: ').font.bold = True
-                p.add_run('✓ 已找到配置页面').font.color.rgb = RGBColor(0, 128, 0)
-                
-                # 配置信息
-                if platform.get('url'):
-                    p = doc.add_paragraph()
-                    p.add_run('页面地址: ').font.bold = True
-                    p.add_run(platform['url'])
-                
-                if platform.get('menu_text'):
-                    p = doc.add_paragraph()
-                    p.add_run('菜单位置: ').font.bold = True
-                    p.add_run(platform['menu_text'])
-                
-                # 添加截图
-                screenshot_file = platform.get('screenshot')
-                if screenshot_file:
-                    screenshot_path = self.screenshots_dir / screenshot_file
-                    if screenshot_path.exists():
-                        doc.add_paragraph()
-                        p = doc.add_paragraph()
-                        p.add_run('配置页面截图：').font.bold = True
-                        doc.add_picture(str(screenshot_path), width=Inches(6))
-                        
-                        # 居中对齐
-                        last_paragraph = doc.paragraphs[-1]
-                        last_paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
-                    else:
-                        p = doc.add_paragraph()
-                        p.add_run('⚠ 截图文件未找到').font.color.rgb = RGBColor(255, 128, 0)
-            else:
-                # 未找到配置
-                p = doc.add_paragraph()
-                p.add_run('配置状态: ').font.bold = True
-                p.add_run('✗ 未找到配置页面').font.color.rgb = RGBColor(255, 0, 0)
-                
-                message = platform.get('message', '未在系统中找到相关配置')
-                p = doc.add_paragraph()
-                p.add_run('说明: ').font.bold = True
-                p.add_run(message)
-            
-            doc.add_paragraph()
+            for platform in platforms:
+                platform_name = platform.get('name', '未知')
+                status_icon = "✓" if platform.get('found', False) else "○"
+                p = doc.add_paragraph(f"{status_icon} {platform_name}平台配置", style='List Bullet')
+                p.paragraph_format.left_indent = Inches(0.5)
+        
+        doc.add_paragraph()
     
     def add_manual_results(self, doc):
-        """添加手动搜索结果"""
+        """添加配置详情说明"""
+        doc.add_heading('四、配置内容说明', level=1)
+        
+        p = doc.add_paragraph()
+        p.add_run('根据OTA平台设置页面的配置内容，三个平台通常需要配置以下信息：')
+        
+        doc.add_paragraph()
+        
+        # 美团配置说明
+        doc.add_heading('4.1 美团平台配置项', level=2)
+        meituan_items = [
+            "AppID - 美团提供的应用标识",
+            "AppSecret - 美团提供的应用密钥",
+            "回调域名 - 接收美团订单通知的回调地址",
+            "IP白名单 - 允许访问的IP地址列表"
+        ]
+        for item in meituan_items:
+            p = doc.add_paragraph(item, style='List Bullet')
+            p.paragraph_format.left_indent = Inches(0.5)
+        
+        doc.add_paragraph()
+        
+        # 携程配置说明
+        doc.add_heading('4.2 携程平台配置项', level=2)
+        ctrip_items = [
+            "账号ID - 携程提供的账号标识",
+            "密钥 - 携程提供的接口密钥",
+            "回调域名 - 接收携程订单通知的回调地址",
+            "IP白名单 - 允许访问的IP地址列表"
+        ]
+        for item in ctrip_items:
+            p = doc.add_paragraph(item, style='List Bullet')
+            p.paragraph_format.left_indent = Inches(0.5)
+        
+        doc.add_paragraph()
+        
+        # 抖音配置说明
+        doc.add_heading('4.3 抖音平台配置项', level=2)
+        douyin_items = [
+            "AppID - 抖音提供的应用ID",
+            "AppSecret - 抖音提供的应用密钥",
+            "Token - 接口调用令牌",
+            "回调地址 - 接收抖音通知的回调地址"
+        ]
+        for item in douyin_items:
+            p = doc.add_paragraph(item, style='List Bullet')
+            p.paragraph_format.left_indent = Inches(0.5)
+        
+        doc.add_paragraph()
+        
         manual_results = self.test_results.get('manual_search_results', [])
         
         if manual_results:
-            doc.add_heading('四、第三方平台配置详情', level=1)
+            doc.add_heading('补充配置信息', level=2)
             
             p = doc.add_paragraph()
             p.add_run('通过系统页面查看，在分销商管理模块中找到了三个平台的配置信息：').font.size = Pt(11)

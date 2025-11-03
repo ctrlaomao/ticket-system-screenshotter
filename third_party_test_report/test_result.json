@@ -1,40 +1,24 @@
 {
-  "test_time": "2025-11-03 10:05:49",
+  "test_time": "2025-11-03 10:13:09",
   "tester": "13811458301",
   "system_url": "https://xs.bjstarfish.com",
+  "ota_settings_url": "https://xs.bjstarfish.com/SettingManagement",
   "platforms": [
     {
       "name": "美团",
       "found": false,
-      "message": "未在系统中找到相关配置页面"
+      "screenshot": ""
     },
     {
       "name": "携程",
       "found": false,
-      "message": "未在系统中找到相关配置页面"
+      "screenshot": ""
     },
     {
       "name": "抖音",
       "found": false,
-      "message": "未在系统中找到相关配置页面"
+      "screenshot": ""
     }
   ],
-  "manual_search_results": [
-    {
-      "url": "https://xs.bjstarfish.com/ProductModule/Distributors",
-      "platforms": [
-        "美团"
-      ],
-      "screenshot": "配置页面_分销商-亿思维智慧门店_20251103_100605.png"
-    },
-    {
-      "url": "https://xs.bjstarfish.com/ProductModule/DistributorTickets",
-      "platforms": [
-        "美团",
-        "携程",
-        "抖音"
-      ],
-      "screenshot": "配置页面_分销商产品-亿思维智慧门店_20251103_100609.png"
-    }
-  ]
+  "screenshot": "OTA平台设置_已打码_20251103_101325.png"
 }
