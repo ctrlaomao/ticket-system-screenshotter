@@ -1,5 +1,5 @@
 {
-  "test_time": "2025-11-03 09:42:52",
+  "test_time": "2025-11-03 10:05:49",
   "tester": "13811458301",
   "system_url": "https://xs.bjstarfish.com",
   "platforms": [
@@ -25,7 +25,7 @@
       "platforms": [
         "美团"
       ],
-      "screenshot": "配置页面_分销商-亿思维智慧门店_20251103_094309.png"
+      "screenshot": "配置页面_分销商-亿思维智慧门店_20251103_100605.png"
     },
     {
       "url": "https://xs.bjstarfish.com/ProductModule/DistributorTickets",
@@ -34,7 +34,7 @@
         "携程",
         "抖音"
       ],
-      "screenshot": "配置页面_分销商产品-亿思维智慧门店_20251103_094314.png"
+      "screenshot": "配置页面_分销商产品-亿思维智慧门店_20251103_100609.png"
     }
   ]
 }
