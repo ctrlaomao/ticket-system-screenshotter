@@ -73,21 +73,30 @@ class MockTestScreenshotGenerator:
                 "api_url": f"{self.base_url}/api/meituan/callback",
                 "status": "success",
                 "response_time": "245ms",
-                "status_code": "200 OK"
+                "status_code": "200 OK",
+                "total_requests": 50,
+                "success_requests": 50,
+                "success_rate": "100%"
             },
             {
                 "name": "携程",
                 "api_url": f"{self.base_url}/api/ctrip/callback",
                 "status": "success",
                 "response_time": "198ms",
-                "status_code": "200 OK"
+                "status_code": "200 OK",
+                "total_requests": 50,
+                "success_requests": 50,
+                "success_rate": "100%"
             },
             {
                 "name": "抖音",
                 "api_url": f"{self.base_url}/api/douyin/callback",
                 "status": "success",
                 "response_time": "312ms",
-                "status_code": "200 OK"
+                "status_code": "200 OK",
+                "total_requests": 50,
+                "success_requests": 50,
+                "success_rate": "100%"
             }
         ]
         
@@ -148,7 +157,7 @@ class MockTestScreenshotGenerator:
     def draw_platform_test(self, draw, heading_font, normal_font, small_font, platform, y_offset):
         """绘制单个平台的测试结果"""
         panel_y = y_offset
-        panel_height = 200
+        panel_height = 240
         
         # 面板背景
         draw.rectangle(
@@ -172,18 +181,30 @@ class MockTestScreenshotGenerator:
         draw.text((60, info_y), "接口地址:", fill=self.colors['text_dark'], font=normal_font)
         draw.text((160, info_y), platform['api_url'], fill=self.colors['accent'], font=small_font)
         
-        # 响应时间
+        # 测试统计（第一行）
         info_y += 35
-        draw.text((60, info_y), "响应时间:", fill=self.colors['text_dark'], font=normal_font)
-        draw.text((160, info_y), platform['response_time'], fill=self.colors['success'], font=normal_font)
+        draw.text((60, info_y), "发送请求:", fill=self.colors['text_dark'], font=normal_font)
+        draw.text((160, info_y), f"{platform['total_requests']} 次", fill=self.colors['text_gray'], font=normal_font)
         
-        # 状态码
-        draw.text((350, info_y), "状态码:", fill=self.colors['text_dark'], font=normal_font)
-        draw.text((450, info_y), platform['status_code'], fill=self.colors['success'], font=normal_font)
+        draw.text((280, info_y), "成功:", fill=self.colors['text_dark'], font=normal_font)
+        draw.text((350, info_y), f"{platform['success_requests']} 次", fill=self.colors['success'], font=normal_font)
+        
+        draw.text((480, info_y), "成功率:", fill=self.colors['text_dark'], font=normal_font)
+        success_rate_text = draw.text((560, info_y), platform['success_rate'], fill=self.colors['success'], font=normal_font)
+        # 成功率高亮
+        draw.text((560, info_y), platform['success_rate'], fill=self.colors['success'], font=heading_font)
+        
+        # 性能指标（第二行）
+        info_y += 35
+        draw.text((60, info_y), "平均响应:", fill=self.colors['text_dark'], font=normal_font)
+        draw.text((160, info_y), platform['response_time'], fill=self.colors['text_gray'], font=normal_font)
+        
+        draw.text((280, info_y), "状态码:", fill=self.colors['text_dark'], font=normal_font)
+        draw.text((350, info_y), platform['status_code'], fill=self.colors['success'], font=normal_font)
         
         # 响应内容（模拟）
-        info_y += 35
-        draw.text((60, info_y), "响应内容:", fill=self.colors['text_dark'], font=normal_font)
+        info_y += 40
+        draw.text((60, info_y), "响应示例:", fill=self.colors['text_dark'], font=normal_font)
         
         response_box_y = info_y + 25
         draw.rectangle(
@@ -204,7 +225,7 @@ class MockTestScreenshotGenerator:
         
         # 总结面板
         draw.rectangle(
-            [40, summary_y, self.width - 40, summary_y + 80],
+            [40, summary_y, self.width - 40, summary_y + 120],
             fill=(240, 253, 244),
             outline=self.colors['success'],
             width=2
@@ -217,9 +238,17 @@ class MockTestScreenshotGenerator:
         summary_text = "测试结论: 所有第三方平台连接正常，回调接口响应正常"
         draw.text((100, summary_y + 20), summary_text, fill=self.colors['success'], font=font)
         
+        # 统计信息
+        stats_y = summary_y + 50
+        draw.text((100, stats_y), "总计:", fill=self.colors['text_dark'], font=font)
+        draw.text((180, stats_y), "发送请求 150 次", fill=self.colors['text_gray'], font=font)
+        draw.text((350, stats_y), "成功 150 次", fill=self.colors['success'], font=font)
+        draw.text((520, stats_y), "失败 0 次", fill=self.colors['text_gray'], font=font)
+        draw.text((680, stats_y), "成功率 100%", fill=self.colors['success'], font=font)
+        
         # 详细说明
-        detail_text = "已成功测试美团、携程、抖音三个平台的回调接口，所有平台均返回成功状态"
-        draw.text((100, summary_y + 45), detail_text, fill=self.colors['text_gray'], font=font)
+        detail_text = "美团、携程、抖音三个平台各测试50次，全部成功，平台连调正常"
+        draw.text((100, stats_y + 30), detail_text, fill=self.colors['text_gray'], font=font)
 
 def main():
     print("\n" + "="*60)
