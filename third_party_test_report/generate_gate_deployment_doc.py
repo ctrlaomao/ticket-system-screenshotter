@@ -32,6 +32,13 @@ class GateMaintenanceDocGenerator:
         title_run.font.bold = True
         title_run.font.color.rgb = RGBColor(0, 51, 153)
         
+        # 添加部署日期
+        p = self.doc.add_paragraph()
+        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        date_run = p.add_run('部署日期：2023-11-05')
+        date_run.font.size = Pt(14)
+        date_run.font.color.rgb = RGBColor(68, 114, 196)
+        
         self.doc.add_paragraph()
     
     def add_overview(self):
@@ -200,9 +207,6 @@ class GateMaintenanceDocGenerator:
         for cell in table.rows[0].cells:
             cell.paragraphs[0].runs[0].font.bold = True
             cell.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
-            # 设置表头背景色
-            shading_elm = cell._element.get_or_add_tcPr()
-            shading_elm.append(self.doc._element.makeelement('w:shd'))
         
         table.rows[1].cells[0].text = '登录账号'
         account_cell = table.rows[1].cells[1]
