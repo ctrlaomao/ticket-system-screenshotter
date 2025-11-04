@@ -210,14 +210,23 @@ class GateMaintenanceDocGenerator:
         
         table.rows[1].cells[0].text = '登录账号'
         account_cell = table.rows[1].cells[1]
-        account_cell.text = '13064767168'
+        account_cell.text = '130****7168'
         account_cell.paragraphs[0].runs[0].font.bold = True
         
         table.rows[2].cells[0].text = '登录密码'
         password_cell = table.rows[2].cells[1]
-        password_cell.text = 'Zaji@@1234'
+        password_cell.text = '********'
         password_cell.paragraphs[0].runs[0].font.bold = True
-        password_cell.paragraphs[0].runs[0].font.color.rgb = RGBColor(255, 0, 0)
+        password_cell.paragraphs[0].runs[0].font.color.rgb = RGBColor(128, 128, 128)
+        
+        self.doc.add_paragraph()
+        
+        # 脱敏说明
+        p = self.doc.add_paragraph()
+        p.add_run('说明: ').font.bold = True
+        note_run = p.add_run('上述账号信息已脱敏处理。完整账号密码由系统管理员和供应商维护人员掌握，如需获取请联系相关负责人。')
+        note_run.font.color.rgb = RGBColor(255, 128, 0)
+        note_run.font.italic = True
         
         self.doc.add_paragraph()
         
@@ -228,7 +237,8 @@ class GateMaintenanceDocGenerator:
             "该账号用于闸机系统管理和维护操作",
             "登录后可进行系统设置、数据同步等操作",
             "请定期修改密码以确保系统安全",
-            "如需修改密码，请及时通知相关维护人员"
+            "完整账号信息由供应商（亿思维科技有限公司）妥善保管",
+            "如需使用完整账号，请联系供应商技术支持人员"
         ]
         
         for note in usage_notes:
