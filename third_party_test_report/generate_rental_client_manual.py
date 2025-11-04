@@ -53,7 +53,7 @@ class RentalClientManualGenerator:
         # 基本信息
         self.doc.add_heading('1.1 基本信息', level=2)
         
-        table = self.doc.add_table(rows=6, cols=2)
+        table = self.doc.add_table(rows=9, cols=2)
         table.style = 'Light Grid Accent 1'
         
         table.rows[0].cells[0].text = '项目'
@@ -72,11 +72,20 @@ class RentalClientManualGenerator:
         table.rows[3].cells[0].text = '供应商'
         table.rows[3].cells[1].text = '亿思维科技有限公司'
         
-        table.rows[4].cells[0].text = '发布日期'
-        table.rows[4].cells[1].text = '2023-11-05'
+        table.rows[4].cells[0].text = '设备型号'
+        table.rows[4].cells[1].text = 'V2S'
         
-        table.rows[5].cells[0].text = '对接系统'
-        table.rows[5].cells[1].text = '票务系统 (xs.bjstarfish.com)'
+        table.rows[5].cells[0].text = '设备数量'
+        table.rows[5].cells[1].text = '15台'
+        
+        table.rows[6].cells[0].text = '采购来源'
+        table.rows[6].cells[1].text = '亿思维科技有限公司'
+        
+        table.rows[7].cells[0].text = '发布日期'
+        table.rows[7].cells[1].text = '2023-11-05'
+        
+        table.rows[8].cells[0].text = '对接系统'
+        table.rows[8].cells[1].text = '票务系统 (xs.bjstarfish.com)'
         
         self.doc.add_paragraph()
         
@@ -103,8 +112,29 @@ class RentalClientManualGenerator:
         """添加安装要求"""
         self.doc.add_heading('二、安装要求', level=1)
         
+        # 设备信息
+        self.doc.add_heading('2.1 设备信息', level=2)
+        
+        p = self.doc.add_paragraph()
+        p.add_run('设备型号: ').font.bold = True
+        p.add_run('V2S')
+        
+        p = self.doc.add_paragraph()
+        p.add_run('设备数量: ').font.bold = True
+        p.add_run('15台')
+        
+        p = self.doc.add_paragraph()
+        p.add_run('采购来源: ').font.bold = True
+        p.add_run('亿思维科技有限公司')
+        
+        p = self.doc.add_paragraph()
+        p.add_run('设备用途: ').font.bold = True
+        p.add_run('租赁业务现场操作，包括租赁下单、设备归还、库存管理等')
+        
+        self.doc.add_paragraph()
+        
         # 设备要求
-        self.doc.add_heading('2.1 设备要求', level=2)
+        self.doc.add_heading('2.2 设备要求', level=2)
         
         requirements = [
             "Android系统版本：Android 5.0或以上",
@@ -121,7 +151,7 @@ class RentalClientManualGenerator:
         self.doc.add_paragraph()
         
         # 安装包要求
-        self.doc.add_heading('2.2 安装包要求', level=2)
+        self.doc.add_heading('2.3 安装包要求', level=2)
         
         p = self.doc.add_paragraph()
         p.add_run('安装包来源: ').font.bold = True
@@ -581,6 +611,8 @@ class RentalClientManualGenerator:
         print(f"\n✓ 文档已生成: {OUTPUT_FILE}")
         print(f"  发布日期: 2023-11-05")
         print(f"  供应商: 亿思维科技有限公司")
+        print(f"  设备型号: V2S")
+        print(f"  设备数量: 15台")
         print(f"  平台: Android")
         print(f"  内容: 安装步骤、功能介绍、维护指南")
         print("="*60 + "\n")
