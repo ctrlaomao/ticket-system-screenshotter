@@ -53,7 +53,7 @@ class RentalClientManualGenerator:
         # 基本信息
         self.doc.add_heading('1.1 基本信息', level=2)
         
-        table = self.doc.add_table(rows=9, cols=2)
+        table = self.doc.add_table(rows=10, cols=2)
         table.style = 'Light Grid Accent 1'
         
         table.rows[0].cells[0].text = '项目'
@@ -72,20 +72,23 @@ class RentalClientManualGenerator:
         table.rows[3].cells[0].text = '供应商'
         table.rows[3].cells[1].text = '亿思维科技有限公司'
         
-        table.rows[4].cells[0].text = '设备型号'
-        table.rows[4].cells[1].text = 'V2S'
+        table.rows[4].cells[0].text = '设备品牌'
+        table.rows[4].cells[1].text = 'Sunmi (商米)'
         
-        table.rows[5].cells[0].text = '设备数量'
-        table.rows[5].cells[1].text = '15台'
+        table.rows[5].cells[0].text = '设备型号'
+        table.rows[5].cells[1].text = 'V2S'
         
-        table.rows[6].cells[0].text = '采购来源'
-        table.rows[6].cells[1].text = '亿思维科技有限公司'
+        table.rows[6].cells[0].text = '设备数量'
+        table.rows[6].cells[1].text = '15台'
         
-        table.rows[7].cells[0].text = '发布日期'
-        table.rows[7].cells[1].text = '2023-11-05'
+        table.rows[7].cells[0].text = '采购来源'
+        table.rows[7].cells[1].text = '亿思维科技有限公司'
         
-        table.rows[8].cells[0].text = '对接系统'
-        table.rows[8].cells[1].text = '票务系统 (xs.bjstarfish.com)'
+        table.rows[8].cells[0].text = '发布日期'
+        table.rows[8].cells[1].text = '2023-11-05'
+        
+        table.rows[9].cells[0].text = '对接系统'
+        table.rows[9].cells[1].text = '票务系统 (xs.bjstarfish.com)'
         
         self.doc.add_paragraph()
         
@@ -114,6 +117,10 @@ class RentalClientManualGenerator:
         
         # 设备信息
         self.doc.add_heading('2.1 设备信息', level=2)
+        
+        p = self.doc.add_paragraph()
+        p.add_run('设备品牌: ').font.bold = True
+        p.add_run('Sunmi (商米)')
         
         p = self.doc.add_paragraph()
         p.add_run('设备型号: ').font.bold = True
@@ -611,6 +618,7 @@ class RentalClientManualGenerator:
         print(f"\n✓ 文档已生成: {OUTPUT_FILE}")
         print(f"  发布日期: 2023-11-05")
         print(f"  供应商: 亿思维科技有限公司")
+        print(f"  设备品牌: Sunmi (商米)")
         print(f"  设备型号: V2S")
         print(f"  设备数量: 15台")
         print(f"  平台: Android")
