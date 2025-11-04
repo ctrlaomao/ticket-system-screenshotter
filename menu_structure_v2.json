@@ -6,337 +6,337 @@
   },
   {
     "path": "工作台-收银",
-    "url": "https://xstest.axioxio.com/OrderModule/CheckOut",
+    "url": "https://xs.bjstarfish.com/OrderModule/CheckOut",
     "screenshot": "002_工作台-收银.png",
     "description": "工作台-收银"
   },
   {
     "path": "工作台-发卡",
-    "url": "https://xstest.axioxio.com/OrderModule/CheckOut/BindCard",
+    "url": "https://xs.bjstarfish.com/OrderModule/CheckOut/BindCard",
     "screenshot": "003_工作台-发卡.png",
     "description": "工作台-发卡"
   },
   {
     "path": "工作台-还卡",
-    "url": "https://xstest.axioxio.com/OrderModule/CheckOut/Return",
+    "url": "https://xs.bjstarfish.com/OrderModule/CheckOut/Return",
     "screenshot": "004_工作台-还卡.png",
     "description": "工作台-还卡"
   },
   {
     "path": "订单管理-订单列表",
-    "url": "https://xstest.axioxio.com/OrderModule/Orders",
+    "url": "https://xs.bjstarfish.com/OrderModule/Orders",
     "screenshot": "005_订单管理-订单列表.png",
     "description": "订单管理-订单列表"
   },
   {
     "path": "订单管理-票务管理",
-    "url": "https://xstest.axioxio.com/OrderModule/OrderTickets",
+    "url": "https://xs.bjstarfish.com/OrderModule/OrderTickets",
     "screenshot": "006_订单管理-票务管理.png",
     "description": "订单管理-票务管理"
   },
   {
     "path": "票务管理-电子券列表",
-    "url": "https://xstest.axioxio.com/ProductModule/ETicketItems",
+    "url": "https://xs.bjstarfish.com/ProductModule/ETicketItems",
     "screenshot": "011_票务管理-电子券列表.png",
     "description": "票务管理-电子券列表"
   },
   {
     "path": "票务管理-电子票初始化",
-    "url": "https://xstest.axioxio.com/ProductModule/ETickets",
+    "url": "https://xs.bjstarfish.com/ProductModule/ETickets",
     "screenshot": "012_票务管理-电子票初始化.png",
     "description": "票务管理-电子票初始化"
   },
   {
     "path": "票务管理-纸制票模板",
-    "url": "https://xstest.axioxio.com/ProductModule/ETicketTemplates",
+    "url": "https://xs.bjstarfish.com/ProductModule/ETicketTemplates",
     "screenshot": "013_票务管理-纸制票模板.png",
     "description": "票务管理-纸制票模板"
   },
   {
     "path": "通行管理-人脸库",
-    "url": "https://xstest.axioxio.com/OrderModule/FaceImages",
+    "url": "https://xs.bjstarfish.com/OrderModule/FaceImages",
     "screenshot": "014_通行管理-人脸库.png",
     "description": "通行管理-人脸库"
   },
   {
     "path": "通行管理-闸机配置",
-    "url": "https://xstest.axioxio.com/OrderModule/Gates",
+    "url": "https://xs.bjstarfish.com/OrderModule/Gates",
     "screenshot": "015_通行管理-闸机配置.png",
     "description": "通行管理-闸机配置"
   },
   {
     "path": "控制面板-产品管理",
-    "url": "https://xstest.axioxio.com/ProductModule/Products",
+    "url": "https://xs.bjstarfish.com/ProductModule/Products",
     "screenshot": "019_控制面板-产品管理.png",
     "description": "控制面板-产品管理"
   },
   {
     "path": "控制面板-产品分类",
-    "url": "https://xstest.axioxio.com/ProductModule/Categories",
+    "url": "https://xs.bjstarfish.com/ProductModule/Categories",
     "screenshot": "020_控制面板-产品分类.png",
     "description": "控制面板-产品分类"
   },
   {
     "path": "控制面板-节假日设置",
-    "url": "https://xstest.axioxio.com/ProductModule/Holidays",
+    "url": "https://xs.bjstarfish.com/ProductModule/Holidays",
     "screenshot": "021_控制面板-节假日设置.png",
     "description": "控制面板-节假日设置"
   },
   {
     "path": "系统管理-文件管理",
-    "url": "https://xstest.axioxio.com/FileManagement",
+    "url": "https://xs.bjstarfish.com/FileManagement",
     "screenshot": "035_系统管理-文件管理.png",
     "description": "系统管理-文件管理"
   },
   {
     "path": "系统管理-组织机构",
-    "url": "https://xstest.axioxio.com/Identity/OrganizationUnits",
+    "url": "https://xs.bjstarfish.com/Identity/OrganizationUnits",
     "screenshot": "036_系统管理-组织机构.png",
     "description": "系统管理-组织机构"
   },
   {
     "path": "系统管理-角色管理",
-    "url": "https://xstest.axioxio.com/Identity/Roles",
+    "url": "https://xs.bjstarfish.com/Identity/Roles",
     "screenshot": "037_系统管理-角色管理.png",
     "description": "系统管理-角色管理"
   },
   {
     "path": "系统管理-用户管理",
-    "url": "https://xstest.axioxio.com/Identity/Users",
+    "url": "https://xs.bjstarfish.com/Identity/Users",
     "screenshot": "038_系统管理-用户管理.png",
     "description": "系统管理-用户管理"
   },
   {
     "path": "系统管理-安全日志",
-    "url": "https://xstest.axioxio.com/Identity/SecurityLogs",
+    "url": "https://xs.bjstarfish.com/Identity/SecurityLogs",
     "screenshot": "040_系统管理-安全日志.png",
     "description": "系统管理-安全日志"
   },
   {
     "path": "系统管理-系统设置",
-    "url": "https://xstest.axioxio.com/SettingManagement",
+    "url": "https://xs.bjstarfish.com/SettingManagement",
     "screenshot": "042_系统管理-系统设置.png",
     "description": "系统管理-系统设置"
   },
   {
     "path": "票务-产品-产品管理",
-    "url": "https://xstest.axioxio.com/ProductModule/Products",
+    "url": "https://xs.bjstarfish.com/ProductModule/Products",
     "screenshot": "043_票务-产品-产品管理.png",
     "description": "票务-产品-产品管理"
   },
   {
     "path": "票务-产品-产品分类",
-    "url": "https://xstest.axioxio.com/ProductModule/Categories",
+    "url": "https://xs.bjstarfish.com/ProductModule/Categories",
     "screenshot": "044_票务-产品-产品分类.png",
     "description": "票务-产品-产品分类"
   },
   {
     "path": "租赁-产品-产品管理",
-    "url": "https://xstest.axioxio.com/ProductModule/Products/IndexLease",
+    "url": "https://xs.bjstarfish.com/ProductModule/Products/IndexLease",
     "screenshot": "045_租赁-产品-产品管理.png",
     "description": "租赁-产品-产品管理"
   },
   {
     "path": "租赁-产品-产品分类",
-    "url": "https://xstest.axioxio.com/ProductModule/Categories/IndexLease",
+    "url": "https://xs.bjstarfish.com/ProductModule/Categories/IndexLease",
     "screenshot": "046_租赁-产品-产品分类.png",
     "description": "租赁-产品-产品分类"
   },
   {
     "path": "小程序-首页装修",
-    "url": "https://xstest.axioxio.com/MiniprogramAdmin/Design/Ticket",
+    "url": "https://xs.bjstarfish.com/MiniprogramAdmin/Design/Ticket",
     "screenshot": "047_小程序-首页装修.png",
     "description": "小程序-首页装修"
   },
   {
     "path": "报表-票务核销报表",
-    "url": "https://xstest.axioxio.com/OrderModule/WriteOffItems",
+    "url": "https://xs.bjstarfish.com/OrderModule/WriteOffItems",
     "screenshot": "048_报表-票务核销报表.png",
     "description": "报表-票务核销报表"
   },
   {
     "path": "报表-教学核销报表",
-    "url": "https://xstest.axioxio.com/OrderModule/WriteOffItems/Train",
+    "url": "https://xs.bjstarfish.com/OrderModule/WriteOffItems/Train",
     "screenshot": "049_报表-教学核销报表.png",
     "description": "报表-教学核销报表"
   },
   {
     "path": "报表-租赁核销报表",
-    "url": "https://xstest.axioxio.com/OrderModule/LeaseWriteOffs",
+    "url": "https://xs.bjstarfish.com/OrderModule/LeaseWriteOffs",
     "screenshot": "050_报表-租赁核销报表.png",
     "description": "报表-租赁核销报表"
   },
   {
     "path": "租赁-订单",
-    "url": "https://xstest.axioxio.com/OrderModule/Leases",
+    "url": "https://xs.bjstarfish.com/OrderModule/Leases",
     "screenshot": "051_租赁-订单.png",
     "description": "租赁-订单"
   },
   {
     "path": "产品分类",
-    "url": "https://xstest.axioxio.com/ProductModule/Categories/IndexBooking",
+    "url": "https://xs.bjstarfish.com/ProductModule/Categories/IndexBooking",
     "screenshot": "052_产品分类.png",
     "description": "产品分类"
   },
   {
     "path": "产品属性",
-    "url": "https://xstest.axioxio.com/Train/ProductAttributes",
+    "url": "https://xs.bjstarfish.com/Train/ProductAttributes",
     "screenshot": "053_产品属性.png",
     "description": "产品属性"
   },
   {
     "path": "产品管理",
-    "url": "https://xstest.axioxio.com/ProductModule/Products/IndexBook",
+    "url": "https://xs.bjstarfish.com/ProductModule/Products/IndexBook",
     "screenshot": "054_产品管理.png",
     "description": "产品管理"
   },
   {
     "path": "内部等级",
-    "url": "https://xstest.axioxio.com/ProductModule/Distributorlevels",
+    "url": "https://xs.bjstarfish.com/ProductModule/Distributorlevels",
     "screenshot": "055_内部等级.png",
     "description": "内部等级"
   },
   {
     "path": "分销商",
-    "url": "https://xstest.axioxio.com/ProductModule/Distributors",
+    "url": "https://xs.bjstarfish.com/ProductModule/Distributors",
     "screenshot": "056_分销商.png",
     "description": "分销商"
   },
   {
     "path": "分销商产品",
-    "url": "https://xstest.axioxio.com/ProductModule/DistributorTickets",
+    "url": "https://xs.bjstarfish.com/ProductModule/DistributorTickets",
     "screenshot": "057_分销商产品.png",
     "description": "分销商产品"
   },
   {
     "path": "卡片管理",
-    "url": "https://xstest.axioxio.com/OrderModule/GateCards",
+    "url": "https://xs.bjstarfish.com/OrderModule/GateCards",
     "screenshot": "058_卡片管理.png",
     "description": "卡片管理"
   },
   {
     "path": "团队下单",
-    "url": "https://xstest.axioxio.com/Train/CheckOut/Batch",
+    "url": "https://xs.bjstarfish.com/Train/CheckOut/Batch",
     "screenshot": "059_团队下单.png",
     "description": "团队下单"
   },
   {
     "path": "培训管理",
-    "url": "https://xstest.axioxio.com/Train/TrainingManagements",
+    "url": "https://xs.bjstarfish.com/Train/TrainingManagements",
     "screenshot": "060_培训管理.png",
     "description": "培训管理"
   },
   {
     "path": "山地学院汇总报表",
-    "url": "https://xstest.axioxio.com/OrderModule/ReportItems",
+    "url": "https://xs.bjstarfish.com/OrderModule/ReportItems",
     "screenshot": "061_山地学院汇总报表.png",
     "description": "山地学院汇总报表"
   },
   {
     "path": "报名表单",
-    "url": "https://xstest.axioxio.com/Train/FormDesigns",
+    "url": "https://xs.bjstarfish.com/Train/FormDesigns",
     "screenshot": "062_报名表单.png",
     "description": "报名表单"
   },
   {
     "path": "拼班",
-    "url": "https://xstest.axioxio.com/Train/Desktop/Group",
+    "url": "https://xs.bjstarfish.com/Train/Desktop/Group",
     "screenshot": "063_拼班.png",
     "description": "拼班"
   },
   {
     "path": "拼班管理",
-    "url": "https://xstest.axioxio.com/Train/CampDates/IndexGroup",
+    "url": "https://xs.bjstarfish.com/Train/CampDates/IndexGroup",
     "screenshot": "064_拼班管理.png",
     "description": "拼班管理"
   },
   {
     "path": "排班管理",
-    "url": "https://xstest.axioxio.com/Train/Vacations",
+    "url": "https://xs.bjstarfish.com/Train/Vacations",
     "screenshot": "065_排班管理.png",
     "description": "排班管理"
   },
   {
     "path": "教练",
-    "url": "https://xstest.axioxio.com/Train/Desktop",
+    "url": "https://xs.bjstarfish.com/Train/Desktop",
     "screenshot": "066_教练.png",
     "description": "教练"
   },
   {
     "path": "教练管理",
-    "url": "https://xstest.axioxio.com/Train/CoachInfos",
+    "url": "https://xs.bjstarfish.com/Train/CoachInfos",
     "screenshot": "067_教练管理.png",
     "description": "教练管理"
   },
   {
     "path": "文本模板",
-    "url": "https://xstest.axioxio.com/TextTemplates",
+    "url": "https://xs.bjstarfish.com/TextTemplates",
     "screenshot": "068_文本模板.png",
     "description": "文本模板"
   },
   {
     "path": "次卡",
-    "url": "https://xstest.axioxio.com/Train/Desktop/BuyTicketCard",
+    "url": "https://xs.bjstarfish.com/Train/Desktop/BuyTicketCard",
     "screenshot": "069_次卡.png",
     "description": "次卡"
   },
   {
     "path": "节假日设置",
-    "url": "https://xstest.axioxio.com/ProductModule/HolidayGroups",
+    "url": "https://xs.bjstarfish.com/ProductModule/HolidayGroups",
     "screenshot": "070_节假日设置.png",
     "description": "节假日设置"
   },
   {
     "path": "营地",
-    "url": "https://xstest.axioxio.com/Train/Desktop/camp",
+    "url": "https://xs.bjstarfish.com/Train/Desktop/camp",
     "screenshot": "071_营地.png",
     "description": "营地"
   },
   {
     "path": "营期管理",
-    "url": "https://xstest.axioxio.com/Train/CampDates",
+    "url": "https://xs.bjstarfish.com/Train/CampDates",
     "screenshot": "072_营期管理.png",
     "description": "营期管理"
   },
   {
     "path": "订单",
-    "url": "https://xstest.axioxio.com/OrderModule/Orders/Train",
+    "url": "https://xs.bjstarfish.com/OrderModule/Orders/Train",
     "screenshot": "073_订单.png",
     "description": "订单"
   },
   {
     "path": "评论管理",
-    "url": "https://xstest.axioxio.com/Train/CoachReviews",
+    "url": "https://xs.bjstarfish.com/Train/CoachReviews",
     "screenshot": "074_评论管理.png",
     "description": "评论管理"
   },
   {
     "path": "软件版本",
-    "url": "https://xstest.axioxio.com/OrderModule/GateVersions",
+    "url": "https://xs.bjstarfish.com/OrderModule/GateVersions",
     "screenshot": "075_软件版本.png",
     "description": "软件版本"
   },
   {
     "path": "运动/级别",
-    "url": "https://xstest.axioxio.com/Train/Sports",
+    "url": "https://xs.bjstarfish.com/Train/Sports",
     "screenshot": "076_运动_级别.png",
     "description": "运动/级别"
   },
   {
     "path": "通行记录",
-    "url": "https://xstest.axioxio.com/OrderModule/GateLogs",
+    "url": "https://xs.bjstarfish.com/OrderModule/GateLogs",
     "screenshot": "077_通行记录.png",
     "description": "通行记录"
   },
   {
     "path": "门店管理",
-    "url": "https://xstest.axioxio.com/Store/StoreInfos#",
+    "url": "https://xs.bjstarfish.com/Store/StoreInfos#",
     "screenshot": "078_门店管理.png",
     "description": "门店管理"
   },
   {
     "path": "首页",
-    "url": "https://xstest.axioxio.com/",
+    "url": "https://xs.bjstarfish.com/",
     "screenshot": "079_首页.png",
     "description": "首页"
   }

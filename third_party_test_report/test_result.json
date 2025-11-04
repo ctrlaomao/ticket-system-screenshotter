@@ -1,0 +1,30 @@
+{
+  "test_time": "2023-11-05 14:30:00",
+  "tester": "13811458301",
+  "system_url": "https://xs.bjstarfish.com",
+  "settings_url": "https://xs.bjstarfish.com/SettingManagement",
+  "platforms": [
+    {
+      "name": "美团",
+      "found": true,
+      "screenshot": "美团_设置_已打码_20251103_102206.png"
+    },
+    {
+      "name": "抖音",
+      "found": true,
+      "screenshot": "抖音_设置_已打码_20251103_102209.png"
+    },
+    {
+      "name": "携程",
+      "found": true,
+      "screenshot": "携程_设置_已打码_20251103_102213.png"
+    }
+  ],
+  "connectivity_test": {
+    "screenshot": "第三方平台连通性测试_20251103_103228.png",
+    "total_requests": 150,
+    "success_requests": 150,
+    "failed_requests": 0,
+    "success_rate": "100%"
+  }
+}
